@@ -1,0 +1,4 @@
+name: CakeParty
+main: com.araykal.cakeparty.CakeParty
+version: 1.0
+api-version: 1.20

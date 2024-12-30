@@ -1,0 +1,37 @@
+[versions]
+adventure = "4.17.0"
+adventure-platform = "4.3.2"
+server_8 = "1.8.8-R0.1-SNAPSHOT"
+scoreboard-library = "2.1.9"
+packetevents = "2.3.0"
+luckperms = "5.4"
+hutool = "5.8.27"
+shadow = "8.1.7"
+papi = "2.11.6"
+litecommands = "3.4.1"
+[libraries]
+
+# Adventure
+adventure-api = { group = "net.kyori", name = "adventure-api", version.ref = "adventure" }
+adventure-nbt = { group = "net.kyori", name = "adventure-nbt", version.ref = "adventure" }
+adventure-gson = { group = "net.kyori", name = "adventure-text-serializer-gson", version.ref = "adventure" }
+adventure-bungee = { group = "net.kyori", name = "adventure-platform-bungeecord", version.ref = "adventure-platform" }
+adventure-bukkit = { group = "net.kyori", name = "adventure-platform-bukkit", version.ref = "adventure-platform" }
+
+spigot_8 = { group = "org.spigotmc", name = "spigot", version.ref = "server_8" }
+scoreboardlibrary-api = { group = "net.megavex", name = "scoreboard-library-api", version.ref = "scoreboard-library" }
+scoreboardlibrary-impl = { group = "net.megavex", name = "scoreboard-library-implementation", version.ref = "scoreboard-library" }
+scoreboardlibrary-kotlin = { group = "net.megavex", name = "scoreboard-library-extra-kotlin", version.ref = "scoreboard-library" }
+scoreboardlibrary-packetevents = { group = "net.megavex", name = "scoreboard-library-packetevents", version.ref = "scoreboard-library" }
+scoreboardlibrary-18 = { group = "net.megavex", name = "scoreboard-library-v1_8_R3", version.ref = "scoreboard-library" }
+
+packetevents = { group = "com.github.retrooper.packetevents", name = "spigot", version.ref = "packetevents" }
+
+luckperms = { group = "net.luckperms", name = "api", version.ref = "luckperms" }
+
+hutool-core = { group = "cn.hutool", name = "hutool-core", version.ref = "hutool" }
+papi = { group = "me.clip", name = "placeholderapi", version.ref = "papi" }
+litecommands = { group = "dev.rollczi", name = "litecommands-bukkit", version.ref = "litecommands" }
+[plugins]
+
+shadow = { id = "io.github.goooler.shadow", version.ref = "shadow" }
