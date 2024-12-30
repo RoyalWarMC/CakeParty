@@ -26,19 +26,10 @@ class CakeParty : JavaPlugin() {
         NewYearEventTask().runTaskTimer(this, 0L, 20L)
 
         Bukkit.getPluginManager().registerEvents(CakeListener(), this)
-        Bukkit.getScheduler().runTaskTimer(this, Runnable {
-            setNightTime()
-        }, 0L, 20L)
     }
 
     override fun onDisable() {
 
-    }
-
-    private fun setNightTime() {
-        for (world in Bukkit.getWorlds()) {
-            world.time = 13000
-        }
     }
 
     private fun loadCommands() {

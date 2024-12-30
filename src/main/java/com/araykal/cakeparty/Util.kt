@@ -30,12 +30,13 @@ fun Player.takePoints(int: Int): Boolean {
 
 fun sendAllMessage(str: String) {
     Bukkit.getOnlinePlayers().forEach {
-        it.send(str)
+        it.send2(str)
     }
 }
 
 fun startFireworkTask(location: Location) {
-    Bukkit.getOnlinePlayers().forEach { PlayerUtil.sendTitle(it, "§c§l新年快乐", "§e给大家拜年了", 0, 5, 10) }
+    sendAllMessage("§c§l新年快乐")
+    sendAllMessage("§e§l给大家拜年了")
     object : BukkitRunnable() {
         var secondsRemaining = 60
         override fun run() {
@@ -55,8 +56,8 @@ fun startFireworkTask(location: Location) {
 
 fun spawnFireworkAroundLocation(centerLocation: Location) {
     val world: World = centerLocation.world ?: return
-    val radius = 50
-    val gap = 3
+    val radius = 35
+    val gap = 4
     for (x in -radius..radius step gap) {
         for (y in -radius..radius step gap) {
             for (z in -radius..radius step gap) {

@@ -32,14 +32,14 @@ class CakeCommand {
         player.send("§a执行成功")
     }
 
+    @Execute(name = "start")
+    fun startTask(@Context player: Player) {
+        startFireworkTask(player.location)
+    }
+
     @Execute(name = "clear")
     fun clearCake() {
         CakeParty.instance.getCakeEntities().forEach { it.block.type = Material.AIR }
-    }
-    private fun setNightTime() {
-        for (world in Bukkit.getWorlds()) {
-            world.time = 13000
-        }
     }
 
 }

@@ -13,6 +13,7 @@ class NewYearEventTask : BukkitRunnable() {
     override fun run() {
         if (isNewYear()){
             startFireworkTask(Location(Bukkit.getWorld("world"),244.0,115.0,160.0))
+            setNightTime()
         }
     }
 
@@ -23,4 +24,10 @@ class NewYearEventTask : BukkitRunnable() {
                 now.get(Calendar.HOUR_OF_DAY) == 0 &&
                 now.get(Calendar.MINUTE) == 0
     }
+    private fun setNightTime() {
+        for (world in Bukkit.getWorlds()) {
+            world.time = 13000
+        }
+    }
+
 }
